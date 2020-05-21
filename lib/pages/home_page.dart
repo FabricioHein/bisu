@@ -1,5 +1,8 @@
+import 'package:bisu/pages/carros/carro_form_page.dart';
 import 'package:bisu/pages/carros/carros_api.dart';
 import 'package:bisu/pages/carros/carros_listview.dart';
+import 'package:bisu/utils/alert.dart';
+import 'package:bisu/utils/nav.dart';
 import 'package:bisu/widgets/draw_list.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
@@ -46,8 +49,16 @@ class _HomePageState extends State<HomePage> with  SingleTickerProviderStateMixi
         CarroListView(TipoCarro.luxo),
       ]),
           drawer: DrawerList (),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: _onClickAddCar,
+        ),
         ),
     );
   }
+
+void _onClickAddCar() {
+  push(context, CarroFormPage());
+}
 }
 

@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 class TipoCarro  {
   static final String classicos = "classicos";
   static final String esportivos = "esportivos";
-  static final String luxo = "luxo";
+  static final String luxo = "luxos";
 }
 class CarrosApi {
    static Future<List<Carro>> getCarros( String tipo) async{

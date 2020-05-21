@@ -4,7 +4,7 @@ class AppButton extends StatelessWidget {
   String text;
   Function onPressed;
 
-  AppButton(this.text, {this.onPressed});
+  AppButton(this.text, {this.onPressed, bool showProgress});
 
   @override
   Widget build(BuildContext context) {
